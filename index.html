@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remplacer les SKU</title>
+    <style>
+        .tile--container--image {
+            width: 100%;
+        }
+        /* Style minimal pour un bon rendu */
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            width: 100%;
+        }
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <h1>Remplacer les SKU dans le code</h1>
+    <!-- Formulaire pour entrer les SKU sous forme de liste -->
+    <div>
+        <label for="skuList">Entrez vos SKU (séparés par des virgules) :</label>
+        <input type="text" id="skuList" placeholder="Entrez les SKU séparés par des virgules" />
+    </div>
+    <div>
+        <button id="generateBtn">Générer le code</button>
+    </div>
+    <h2>Code généré :</h2>
+    <pre id="outputCode"></pre>
+
+    <script src="script.js"></script>
+</body>
+</html>
