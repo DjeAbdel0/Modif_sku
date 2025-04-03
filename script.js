@@ -1,17 +1,11 @@
 document.getElementById('generateBtn').addEventListener('click', function () {
-    // Récupérer les SKU entrés sous forme de texte séparé par des virgules
+    // Récupérer les SKU 
     const skuList = document.getElementById('skuList').value;
 
-    // Séparer les SKU et les trier
+    // Séparer les SKU 
     const skuArray = skuList.split(',').map(sku => sku.trim());
 
-    // Vérifier que nous avons au moins 3 SKU
-    if (skuArray.length < 3) {
-        alert("Veuillez entrer au moins 3 SKU.");
-        return;
-    }
-
-    // Le code HTML de base avec des variables pour insérer les SKU
+    // Le code HTML de base pour les SKU
     const codeEn = `
 
     <!-- ZONE B Carrousel -->
@@ -93,27 +87,38 @@ document.getElementById('generateBtn').addEventListener('click', function () {
         </div>
     </div>`;
 
-     // Afficher le code généré dans l'élément avec l'id "outputCode"
-     document.getElementById('outputCodeFr').textContent = codeFr;
-     document.getElementById('outputCodeEn').textContent = codeEn;
- 
-     // Fonction de copie pour le code en français
-     document.getElementById('copyFrBtn').addEventListener('click', function() {
-         const codeFrText = document.getElementById('outputCodeFr').textContent;
-         navigator.clipboard.writeText(codeFrText).then(function() {
-             alert('Code en français copié!');
-         }).catch(function(err) {
-             alert('Échec de la copie: ' + err);
-         });
-     });
- 
-     // Fonction de copie pour le code en anglais
-     document.getElementById('copyEnBtn').addEventListener('click', function() {
-         const codeEnText = document.getElementById('outputCodeEn').textContent;
-         navigator.clipboard.writeText(codeEnText).then(function() {
-             alert('Code en anglais copié!');
-         }).catch(function(err) {
-             alert('Échec de la copie: ' + err);
-         });
-     });
- });
+    document.getElementById('outputCodeFr').textContent = codeFr;
+    document.getElementById('outputCodeEn').textContent = codeEn;
+
+});
+
+// Copier - coller
+function copyToClipboard(elementId, message) {
+    const textElement = document.getElementById(elementId);
+    const text = textElement.innerText || textElement.textContent;
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+            alert(message);
+        }).catch(() => {
+            fallbackCopyText(text, message);
+        });
+    } else {
+        fallbackCopyText(text, message);
+    }
+}
+
+// Pour Edge
+function fallbackCopyText(text, message) {
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+    alert(message + " (fallback utilisé)");
+}
+
+// Confirmer le copier - coller
+document.getElementById('copyFrBtn').addEventListener('click', () => copyToClipboard('outputCodeFr', 'Code en français copié!'));
+document.getElementById('copyEnBtn').addEventListener('click', () => copyToClipboard('outputCodeEn', 'Code en anglais copié!'));

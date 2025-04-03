@@ -70,17 +70,17 @@ pre {
     top: 10px; /* À 10px du haut */
     right: 10px; /* À 10px de la droite */
     padding: 10px 20px;
-    background-color: #af4c4c;
+    background-color: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     font-size: 14px;
     z-index: 1; /* Assure que le bouton est au-dessus du code */
-}
+}   
 
 .copy-btn:hover {
-    background-color: #a04545;
+    background-color: #45a049;
 }
 
 
