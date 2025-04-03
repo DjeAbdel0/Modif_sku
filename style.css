@@ -70,7 +70,7 @@ pre {
     top: 10px; /* À 10px du haut */
     right: 10px; /* À 10px de la droite */
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #af4c4c;
     color: white;
     border: none;
     cursor: pointer;
@@ -80,7 +80,7 @@ pre {
 }
 
 .copy-btn:hover {
-    background-color: #45a049;
+    background-color: #a04545;
 }
 
 
