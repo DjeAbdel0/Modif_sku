@@ -1,0 +1,86 @@
+/* Image Container */
+.tile--container--image {
+    width: 100%;
+}
+
+/* Général : Style pour input, button, etc. */
+input, button {
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+}
+
+/* Style pour les balises <pre> */
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Bouton de copie */
+.copy-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.copy-btn:hover {
+    background-color: #45a049;
+}
+
+/* Nouveau style pour les sections de code généré (français et anglais) */
+.codeOutput {
+    display: flex; /* Utilisation de Flexbox pour aligner les éléments horizontalement */
+    justify-content: space-between; /* Espacement entre les éléments */
+    gap: 20px; /* Espace entre les deux colonnes */
+    margin-top: 20px;
+}
+
+.codeFr, .codeEn {
+    width: 48%; /* Les deux sections prennent chacune 48% de la largeur disponible */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.codeFr h2, .codeEn h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Style pour les préformattés <pre> dans chaque colonne */
+.codeFr pre, .codeEn pre {
+    background-color: #fafafa;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Style des boutons de copie */
+.copy-btn {
+    position: relative; /* Positionné par rapport au parent */
+    top: 10px; /* À 10px du haut */
+    right: 10px; /* À 10px de la droite */
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1; /* Assure que le bouton est au-dessus du code */
+}
+
+.copy-btn:hover {
+    background-color: #45a049;
+}
+
+
