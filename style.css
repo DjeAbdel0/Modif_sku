@@ -36,7 +36,7 @@ pre {
 }
 
 /* Nouveau style pour les sections de code généré (français et anglais) */
-.codeOutput {
+.codeCarrouselA , .codeCarrouselB {
     display: flex; /* Utilisation de Flexbox pour aligner les éléments horizontalement */
     justify-content: space-between; /* Espacement entre les éléments */
     gap: 20px; /* Espace entre les deux colonnes */

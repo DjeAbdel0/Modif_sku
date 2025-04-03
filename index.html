@@ -1,38 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Remplacer les SKU</title>
-        <!-- Lien vers un fichier CSS externe -->
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Remplacer les SKU dans le code</h1>
-        <!-- Formulaire pour entrer les SKU sous forme de liste -->
-        <div>
-            <label for="skuList">Entrez vos SKU (séparés par des virgules)
-                :</label>
-            <input type="text" id="skuList"
-                placeholder="Entrez les SKU séparés par des virgules" />
-        </div>
-        <div>
-            <button id="generateBtn">Générer le code</button>
-        </div>
-        <div class="codeOutput">
-            <div class="codeFr">
-            <button class="copy-btn" id="copyFrBtn">Copier</button>
-            <h2>Code généré en francais:</h2>
-            <pre id="outputCodeFr"></pre>
-        </div>
-        <div class="codeEn">
-            <button class="copy-btn" id="copyEnBtn">Copier</button>
-            <h2>Code généré en anglais:</h2>
-            <pre id="outputCodeEn"></pre>
-        </div>
-        </div>
-        
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remplacer les SKU</title>
+    <!-- Lien vers un fichier CSS externe -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Remplacer les SKU dans le code</h1>
+    <!-- Formulaire pour entrer les SKU sous forme de liste -->
+    <div>
+      <label for="carrouA">Entrez les SKU pour le carrousel A :</label>
+      <input
+        type="text"
+        id="carrouA"
+        placeholder="Entrez les SKU pour le carrousel A"
+      />
+    </div>
+    <div>
+      <button id="geneCarrouselA">Générer le code</button>
+    </div>
+    <div>
+      <label for="carrouB">Entrez les SKU pour le carrousel B :</label>
+      <input
+        type="text"
+        id="carrouB"
+        placeholder="Entrez les SKU pour le carrousel B"
+      />
+    </div>
+    <div>
+      <button id="geneCarrouselB">Générer le code</button>
+    </div>
+    <div class="codeCarrouselA">
+      <div class="codeFr">
+        <button class="copy-btn" id="copyCarrouAFrBtn">Copier</button>
+        <h2>Code carrousel A en francais:</h2>
+        <pre id="carrouselAFr"></pre>
+      </div>
+      <div class="codeEn">
+        <button class="copy-btn" id="copyCarrouAEnBtn">Copier</button>
+        <h2>Code carrousel A en anglais:</h2>
+        <pre id="carrouselAEn"></pre>
+      </div>
+    </div>
+    <div class="codeCarrouselB">
+      <div class="codeFr">
+        <button class="copy-btn" id="copyCarrouBFrBtn">Copier</button>
+        <h2>Code carrousel B en francais:</h2>
+        <pre id="carrouselBFr"></pre>
+      </div>
+      <div class="codeEn">
+        <button class="copy-btn" id="copyCarrouBEnBtn">Copier</button>
+        <h2>Code carrousel B en anglais:</h2>
+        <pre id="carrouselBEn"></pre>
+      </div>
+    </div>
 
-        <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+  </body>
 </html>
